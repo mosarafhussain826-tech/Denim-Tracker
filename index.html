@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Denim Tracker</title>
+<meta charset="UTF-8">
+<title>Musarraf Mart</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#f5f5f5;
+}
+
+/* Header */
+header{
+    background:#1e73ff;
+    color:white;
+    padding:15px;
+    font-size:22px;
+    text-align:center;
+}
+
+/* Category Bar */
+.categories{
+    display:flex;
+    overflow-x:auto;
+    background:white;
+    padding:10px;
+}
+
+.cat{
+    margin-right:15px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* Product Grid */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+    padding:15px;
+}
+
+/* Product Card */
+.product{
+    background:white;
+    border-radius:12px;
+    padding:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    position:relative;
+}
+
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:gold;
+    padding:3px 8px;
+    font-size:12px;
+    border-radius:6px;
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+
+.price{
+    font-weight:bold;
+    color:#1e73ff;
+}
+
+.old{
+    text-decoration:line-through;
+    color:gray;
+    font-size:14px;
+}
+
+button{
+    background:#1e73ff;
+    color:white;
+    border:none;
+    padding:8px;
+    border-radius:8px;
+    cursor:pointer;
+    width:100%;
+    margin-top:8px;
+}
+
+/* WhatsApp Floating */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 15px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
 
-  <h1>Welcome to Denim Tracker</h1>
-  <p>Online Jeans & Fashion Store</p>
+<header>
+🛒 Musarraf Mart
+</header>
+
+<div class="categories">
+<div class="cat">ALL</div>
+<div class="cat">SHIRT</div>
+<div class="cat">PANT</div>
+<div class="cat">KURTI</div>
+</div>
+
+<div class="container">
+
+<div class="product">
+<span class="badge">BEST SELLER</span>
+<img src="shirt.jpg">
+<h4>Formal Slim Fit Shirt</h4>
+<div class="price">₹499</div>
+<div class="old">₹749</div>
+<a href="https://wa.me/916900676334">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="product">
+<span class="badge">BEST SELLER</span>
+<img src="jeans.jpg">
+<h4>Black Cargo Jogger Jeans</h4>
+<div class="price">₹699</div>
+<div class="old">₹999</div>
+<a href="https://wa.me/916900676334">
+<button>Order Now</button>
+</a>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/916900676334">
+Chat
+</a>
 
 </body>
 </html>
